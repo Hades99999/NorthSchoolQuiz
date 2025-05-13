@@ -107,6 +107,7 @@ function selectAnswer(e) {
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect) {
         selectedBtn.classList.add("correct");
+        score++;
     }
     else {
         selectedBtn.classList.add("incorrect");
@@ -115,7 +116,7 @@ function selectAnswer(e) {
     Array.from(answerButtons.children).forEach(button => {
         if(button.dataset.correct === "true"){
             button.classList.add("correct");
-            score++;
+
         }
         button.disabled = true;
     });
